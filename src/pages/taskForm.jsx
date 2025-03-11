@@ -65,7 +65,7 @@ export default function TaskForm({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="p-6">
+      <DialogContent className="p-6 !bg-white">
         <DialogHeader>
           <DialogTitle>{selectedTask ? "Edit Task" : "Add Task"}</DialogTitle>
         </DialogHeader>
@@ -94,6 +94,7 @@ export default function TaskForm({
               <Switch
                 checked={taskData.status === "completed"}
                 onCheckedChange={handleStatusChange}
+                className="!p-0 !border-none !bg-gray-300"
               />
             </div>
             <Input
@@ -138,10 +139,10 @@ export default function TaskForm({
           </div>
 
           <div className="flex justify-end gap-2">
-            <Button variant="outline" onClick={onClose}>
+            <Button variant="outline" onClick={onClose} className="!text-white !bg-red-700 border-red-500">
               Cancel
             </Button>
-            <Button onClick={handleSave}>
+            <Button onClick={handleSave} className="!bg-cyan-800">
               {selectedTask ? "Update" : "Add"}
             </Button>
           </div>

@@ -234,7 +234,7 @@ export default function MainPage() {
               </TableBody>
             </Table>
           ) : (
-            <h1>No Tasks to show</h1>
+            <h1 className="text-white">No Tasks to show</h1>
           )}
         </div>
       </div>
